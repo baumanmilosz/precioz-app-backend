@@ -57,6 +57,15 @@ components:
           example:
             code: 400
             message: Email already taken
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: 400
+            message: Bad Request
     Unauthorized:
       description: Unauthorized
       content:
@@ -84,7 +93,6 @@ components:
           example:
             code: 404
             message: Not found
-
   securitySchemes:
     bearerAuth:
       type: http
